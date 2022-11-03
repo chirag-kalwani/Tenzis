@@ -1,70 +1,72 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: #0B2434;
-    padding: 30px 20px;
+  margin: 0;
+  background-color: #0B2434;
+  padding: 30px 20px;
 }
 
 
-main{
-    background-color: #F5F5F5;
-    height: 85vh;
-    padding: 5px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+main {
+  background-color: #F5F5F5;
+  height: 85vh;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .title {
-    font-size: 40px;
-    margin: 0;
+  font-size: 40px;
+  margin: 0;
 }
 
 .instructions {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    margin-top: 0;
-    max-width: 400px;
-    text-align: center;
-}
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  max-width: 400px;
+  text-align: center;
 }
 
-.die{
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 3.81277px;
-    cursor: pointer;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
-.die > h3{
-    margin: 0;
-    padding: 0;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.die {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 3.81277px;
+  cursor: pointer;
 }
 
-.roll{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: white;
-    margin-top: 25px;
-    width: 100px;
-    height: 45px;
-    background: #5035FF;
-    box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
-    border-radius: 3.81277px;
+.die>h1 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.roll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  margin-top: 25px;
+  width: 100px;
+  height: 45px;
+  background: #5035FF;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 3.81277px;
 }
