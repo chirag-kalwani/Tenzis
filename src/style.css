@@ -11,7 +11,7 @@ body {
 
 main {
   background-color: #F5F5F5;
-  height: 85vh;
+  height: 91vh;
   padding: 5px;
   border-radius: 10px;
   display: flex;
@@ -35,10 +35,14 @@ main {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 }
-
+@media(max-width:420px){
+  .container {
+     grid-template-columns: repeat(3, 1fr);
+  }
+}
 .die {
   height: 50px;
   width: 50px;

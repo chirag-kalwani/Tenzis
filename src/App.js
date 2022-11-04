@@ -6,23 +6,41 @@ export default function App() {
 
   const [randNumbers, setRandNumbers] = React.useState(allNewDice());
   const [tenzis, setTenzis] = React.useState(false);
+
+
+  function generateRandomNumber(number = 7) {
+    let newNumber = Math.ceil(Math.random() * 6);
+    while (newNumber === number)
+      newNumber = Math.ceil(Math.random() * 6);
+    return newNumber;
+  }
+
+
   function allNewDice() {
     let ret = [];
     for (let i = 0; i < 10; i++) {
       ret.push(
         {
-          value: Math.floor(Math.random() * 6 + 1),
+          value: generateRandomNumber(),
           isHold: false
         });
     }
     return ret;
   }
+
+
   function rollDice() {
-    setRandNumbers(prevState => {
-      let newRandomNumbers = allNewDice();
-      return prevState.map((ele, i) => ele.isHold ? ele : newRandomNumbers[i]);
-    });
+    setRandNumbers(prevState => prevState.map(ele => (
+      ele.isHold ?
+        ele :
+        {
+          ...ele,
+          value: generateRandomNumber(ele.value)
+        })
+    ));
   }
+
+
   function handleClick(id) {
     setRandNumbers(prevState => prevState.map((ele, i) => {
       let newEle = ele;
@@ -32,16 +50,22 @@ export default function App() {
     })
     )
   }
+
+
   function restart() {
     setRandNumbers(allNewDice());
     setTenzis(false);
   }
+
+
   React.useEffect(() => {
     const isHold = randNumbers.every(die => die.isHold);
     const firstValue = randNumbers[0].value;
     const allSameValue = randNumbers.every(die => die.value === firstValue);
     setTenzis(isHold && allSameValue);
-  }, [randNumbers])
+  }, [randNumbers]);
+
+
   return (
     <main>
       {tenzis && <Confetti />}
