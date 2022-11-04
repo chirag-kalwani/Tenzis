@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tenzis/static/css/main.398bbeff.css",
+    "main.js": "/Tenzis/static/js/main.fbb6daba.js",
+    "index.html": "/Tenzis/index.html",
+    "main.398bbeff.css.map": "/Tenzis/static/css/main.398bbeff.css.map",
+    "main.fbb6daba.js.map": "/Tenzis/static/js/main.fbb6daba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.398bbeff.css",
+    "static/js/main.fbb6daba.js"
+  ]
+}
